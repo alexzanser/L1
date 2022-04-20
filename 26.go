@@ -26,7 +26,6 @@ func main() {
 	s2 := "abCdefA"
 	s3 := "aabcd"
 
-	fmt.Println(rune('A'), rune('a'))
 	fmt.Printf("'%s' - %t\n", s1, Unique(s1))
 	fmt.Printf("'%s' - %t\n", s2, Unique(s2))
 	fmt.Printf("'%s' - %t\n", s3, Unique(s3))
