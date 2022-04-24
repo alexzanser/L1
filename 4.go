@@ -26,9 +26,9 @@ func Worker(id int, ch chan  interface{}) {
 func main() {
 	ch := make(chan interface{})
 	shutdown := make(chan os.Signal, 1)
-	n, _ := strconv.Atoi(os.Getenv("WORKERSN"))
+	n, _ := strconv.Atoi(os.Getenv("WORKERSN"))//кол-во воркеров задается переменной окружения WORKERSN
 
-	signal.Notify(shutdown, syscall.SIGINT)
+	signal.Notify(shutdown, syscall.SIGINT)//SIGINT передается в канал shutdown и выполнение прекращается 
 
 	go Translator(ch)
 

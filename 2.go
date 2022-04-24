@@ -20,8 +20,9 @@ func main() {
 
 	for _, val := range arr {
 		wg.Add(1)
-		go SimulateCalc(val, &wg)//Каждая функция работает 5 секунд
+		go SimulateCalc(val, &wg)////каждая функция работает 5 секунд
 	}
 	wg.Wait()
+	//вычисляем параллельно поэтому на все уходит 5 секунд
 	fmt.Println("Seconds passed since programm start :", time.Now().Unix() - start)
 }

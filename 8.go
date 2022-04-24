@@ -4,12 +4,12 @@ import "fmt"
 
 
 func SetBit1(x int64, i int) int64 {
-	x = x | (1 << (i));
+	x = x | (1 << (i));//дизъюнкция с (1 сдвиг влево на i)  
 	return x
 }
 
 func SetBit0(x int64, i int) int64 {
-	x = x & ^(1<<i)
+	x = x & ^(1<<i)//конъюнкция на обратное (1 сдвиг влево на i) 
 	return x
 }
 

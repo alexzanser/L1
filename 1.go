@@ -8,6 +8,7 @@ func (h Human) Greeting() {
 	fmt.Println("I am Human!")
 }
 
+//Встраивание структуры Human в структуру Action
 type Action struct {
 	Human
 }

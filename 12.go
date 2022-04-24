@@ -9,5 +9,6 @@ func main() {
 	for _, word := range words {
 		wordsSet[word] = struct{}{}
 	}
-	fmt.Println(wordsSet)
+	fmt.Println("Strings sequence:", words)
+	fmt.Println("Set:", wordsSet)
 }

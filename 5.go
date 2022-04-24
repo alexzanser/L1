@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	alive , _ := strconv.Atoi(os.Getenv("ALIVE"))
+	alive , _ := strconv.Atoi(os.Getenv("ALIVE"))//время жизни задается переменной окружения "ALIVE"
 
 	start := time.Now().Unix()
 	ch := make(chan int, 1)

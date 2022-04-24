@@ -27,12 +27,13 @@ func main() {
 
 	for i := 0; i < len(keys); i++ {
 		wg.Add(1)
-		go AddRecord(carPrices, &mu, &wg, keys[i], values[i])//На каждую запись по 5 секунд
+		go AddRecord(carPrices, &mu, &wg, keys[i], values[i])//на каждую запись по 5 секунд
 	}
 	wg.Wait()
 
 	for k, v:= range carPrices {
 		fmt.Println(k, v)
 	}
+	//пишем параллельно поэтому на все уходит 5 секунд
 	fmt.Println("Seconds passed since programm start :", time.Now().Unix() - start)
 }

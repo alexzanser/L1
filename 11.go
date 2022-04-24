@@ -31,5 +31,5 @@ func main() {
 			}
 		}
 	}
-	fmt.Println(inter)
+	fmt.Println("Intersection of given sets:", inter)
 }
