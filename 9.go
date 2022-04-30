@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	
 	arr := []int{1, 2, 3, 4, 5}
 	ch1 := make(chan int)
 	ch2 := make(chan int)
